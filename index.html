@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>studio iterra · for designers</title>
+  <!-- Tailwind + fonts + subtle custom curves -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'DM Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    body {
+      background-color: #f7f6fb;
+    }
+    /* soft minimalism — like a moodboard */
+    .design-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(3px);
+      border: 1px solid rgba(220, 210, 255, 0.3);
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .design-card:hover {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #c084fc;
+      box-shadow: 0 20px 35px -15px rgba(140, 120, 255, 0.25);
+      transform: scale(1.02) translateY(-4px);
+    }
+    .grid-line {
+      background-image: linear-gradient(to right, #e4dfff 1px, transparent 1px), linear-gradient(to bottom, #e4dfff 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .glass-pill {
+      background: rgba(255,255,240,0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.7);
+    }
+    .italic-slab {
+      font-family: 'Inter', serif;
+      font-style: italic;
+      font-weight: 300;
+    }
+    .color-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: 0.15s;
+    }
+    .color-dot:hover {
+      transform: scale(1.3);
+      box-shadow: 0 8px 18px -6px currentColor;
+    }
+  </style>
+</head>
+<body class="antialiased text-[#2b2a3b]">
+
+  <!-- main container with subtle grid (designer favourite) -->
+  <div class="relative grid-line min-h-screen">
+    <!-- floating pastel blobs (soft, artistic) -->
+    <div class="fixed top-32 left-12 w-80 h-80 bg-[#f6d5f7] opacity-30 rounded-full mix-blend-multiply blur-3xl -z-10"></div>
+    <div class="fixed bottom-20 right-10 w-96 h-96 bg-[#c5e0ff] opacity-30 rounded-full mix-blend-multiply blur-3xl -z-10"></div>
+
+    <!-- header – super clean, almost invisible -->
+    <header class="sticky top-0 z-40 bg-white/40 backdrop-blur-xl border-b border-[#e1dcf5]">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+        <!-- wordmark with soft weight -->
+        <a href="#" class="text-3xl font-light tracking-tight text-[#35314d] relative">
+          iterra<span class="text-2xl text-[#a88ced] ml-1 font-serif italic">·studio</span>
+        </a>
+
+        <!-- minimalist nav – pure typography -->
+        <nav class="hidden md:flex items-center gap-10 text-sm font-medium text-[#4a4563]">
+          <a href="#" class="hover:text-[#9068f0] transition-all border-b border-transparent hover:border-[#b7a1fd] pb-0.5">index</a>
+          <a href="#craft" class="hover:text-[#9068f0] transition-all border-b border-transparent hover:border-[#b7a1fd] pb-0.5">craft</a>
+          <a href="#work" class="hover:text-[#9068f0] transition-all border-b border-transparent hover:border-[#b7a1fd] pb-0.5">work</a>
+          <a href="#connect" class="hover:text-[#9068f0] transition-all border-b border-transparent hover:border-[#b7a1fd] pb-0.5">connect</a>
+        </nav>
+
+        <!-- tiny colour palette (interaction for designer vibe) -->
+        <div class="flex items-center gap-2">
+          <span class="color-dot bg-[#f9d6c1] border border-white/50"></span>
+          <span class="color-dot bg-[#c1d9f9] border border-white/50"></span>
+          <span class="color-dot bg-[#e3c7ff] border border-white/50"></span>
+          <span class="color-dot bg-[#fbf0c1] border border-white/50 hidden sm:inline-block"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO – airy, asymmetrical, typography-first -->
+    <section class="max-w-7xl mx-auto px-6 md:px-10 pt-20 pb-16 md:pt-28 md:pb-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-end">
+        <!-- left: big soft display -->
+        <div>
+          <span class="inline-block px-4 py-2 rounded-full glass-pill text-xs text-[#6c5f8c] tracking-wide mb-6 border border-white/50 shadow-sm">✦  aesthetics · system · craft</span>
+          <h1 class="text-5xl md:text-7xl font-light leading-[1.1] tracking-tight text-[#211f2e]">
+            where <span class="italic-slab text-[#9170e0]">pixels</span><br>speak louder
+          </h1>
+          <p class="text-lg md:text-xl text-[#5c5575] max-w-lg mt-6 font-light leading-relaxed">
+            web, app, software, video, content, sales, graphic, UI/UX — designed for <span class="font-medium text-[#4c3c7a]">discerning eyes</span>.
+          </p>
+          <!-- abstract colour blocks – designer mood -->
+          <div class="flex gap-3 mt-9">
+            <div class="w-16 h-16 bg-[#b8a5ff] rounded-3xl rotate-6 opacity-80 shadow-inner"></div>
+            <div class="w-16 h-16 bg-[#fed9b7] rounded-3xl -rotate-3 shadow-inner"></div>
+            <div class="w-16 h-16 bg-[#a7d0f0] rounded-3xl rotate-2 shadow-inner"></div>
+          </div>
+        </div>
+        <!-- right: minimal editorial card / type specimen -->
+        <div class="bg-white/60 backdrop-blur-sm p-8 rounded-[3rem] shadow-xl border border-white/60">
+          <p class="text-xs uppercase tracking-[0.3em] text-[#8a7daf] mb-3">— design disciplines</p>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div class="border-r border-[#d7cef0] pr-4">
+              <span class="block font-medium text-[#554d7a]">web design</span>
+              <span class="block text-[#897ca3] mt-1">28 projects</span>
+            </div>
+            <div>
+              <span class="block font-medium text-[#554d7a]">app design</span>
+              <span class="block text-[#897ca3] mt-1">16 projects</span>
+            </div>
+            <div class="border-r border-[#d7cef0] pr-4 mt-4">
+              <span class="block font-medium text-[#554d7a]">ui/ux</span>
+              <span class="block text-[#897ca3] mt-1">42 interfaces</span>
+            </div>
+            <div class="mt-4">
+              <span class="block font-medium text-[#554d7a]">graphic</span>
+              <span class="block text-[#897ca3] mt-1">120+ assets</span>
+            </div>
+          </div>
+          <hr class="my-5 border-[#dfd6f5]">
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-[#8f81b0]">✸ current: design system</span>
+            <span class="bg-[#e7deff] text-[#4d3f78] px-4 py-2 rounded-full text-xs">iterra design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES / CRAFT – grid of cards that feel like design library -->
+    <section id="craft" class="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-14">
+        <div>
+          <span class="text-[#8b7eb5] text-sm font-medium tracking-wider">–––  inventory  –––</span>
+          <h2 class="text-3xl md:text-4xl font-light mt-2 text-[#262338]">elements we master</h2>
+        </div>
+        <p class="text-[#675f86] max-w-sm font-light text-sm">every sector of IT, but through a designer’s lens: refined, structured, beautiful.</p>
+      </div>
+
+      <!-- double grid – large cards + small cards = editorial feel -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 auto-rows-fr">
+        <!-- web dev card (bigger visual) -->
+        <div class="design-card p-6 rounded-3xl row-span-1">
+          <span class="text-4xl block mb-5">🌐</span>
+          <h3 class="text-xl font-medium text-[#262338]">web development</h3>
+          <p class="text-sm text-[#6b618b] mt-1">react, vue, motion, typography, grids — engineered to perfection.</p>
+          <div class="mt-4 flex gap-2 text-xs text-[#9385bb]"><span>design systems</span><span>•</span><span>e‑commerce</span></div>
+        </div>
+        <!-- app dev -->
+        <div class="design-card p-6 rounded-3xl">
+          <span class="text-4xl block mb-5">📱</span>
+          <h3 class="text-xl font-medium text-[#262338]">app development</h3>
+          <p class="text-sm text-[#6b618b]">native · swift · kotlin · flutter · with pixel‑perfect UI</p>
+        </div>
+        <!-- software engineering -->
+        <div class="design-card p-6 rounded-3xl">
+          <span class="text-4xl block mb-5">⚙️</span>
+          <h3 class="text-xl font-medium text-[#262338]">software eng</h3>
+          <p class="text-sm text-[#6b618b]">clean code, APIs, headless — invisible but elegant</p>
+        </div>
+        <!-- video editing (designers love motion) -->
+        <div class="design-card p-6 rounded-3xl">
+          <span class="text-4xl block mb-5">🎬</span>
+          <h3 class="text-xl font-medium text-[#262338]">video editing</h3>
+          <p class="text-sm text-[#6b618b]">cinematic grades, motion graphics, after effects</p>
+        </div>
+        <!-- content writing – with style -->
+        <div class="design-card p-6 rounded-3xl">
+          <span class="text-4xl block mb-5">✍️</span>
+          <h3 class="text-xl font-medium text-[#262338]">content writing</h3>
+          <p class="text-sm text-[#6b618b]">microcopy, storytelling, brand tone</p>
+        </div>
+        <!-- sales enablement (design for conversion) -->
+        <div class="design-card p-6 rounded-3xl">
+          <span class="text-4xl block mb-5">📊</span>
+          <h3 class="text-xl font-medium text-[#262338]">sales / crm</h3>
+          <p class="text-sm text-[#6b618b]">funnels, client portals, data viz</p>
+        </div>
+        <!-- graphic design – core -->
+        <div class="design-card p-6 rounded-3xl md:col-span-2 lg:col-span-1">
+          <span class="text-4xl block mb-5">🎨</span>
+          <h3 class="text-xl font-medium text-[#262338]">graphic design</h3>
+          <p class="text-sm text-[#6b618b]">identity, print, social, brand worlds</p>
+        </div>
+        <!-- UI/UX -->
+        <div class="design-card p-6 rounded-3xl">
+          <span class="text-4xl block mb-5">🖌️</span>
+          <h3 class="text-xl font-medium text-[#262338]">UI/UX design</h3>
+          <p class="text-sm text-[#6b618b]">wireframing, prototypes, user research, design thinking</p>
+        </div>
+        <!-- extra: design research / etc -->
+        <div class="design-card p-6 rounded-3xl bg-white/60">
+          <span class="text-4xl block mb-5">🔮</span>
+          <h3 class="text-xl font-medium text-[#262338]">design strategy</h3>
+          <p class="text-sm text-[#6b618b]">design ops, systems, workshops</p>
+        </div>
+      </div>
+      <p class="text-center text-xs text-[#9587b9] mt-10 italic">* 12+ creative disciplines — all with a designer’s touch</p>
+    </section>
+
+    <!-- WORK – minimal grid, like a mood board / pinboard -->
+    <section id="work" class="bg-[#f1edfc] py-20 border-y border-[#ddd2f0]">
+      <div class="max-w-7xl mx-auto px-6 md:px-10">
+        <div class="text-center max-w-xl mx-auto">
+          <span class="text-[#7a6ba0] text-sm tracking-widest">–––  selected  –––</span>
+          <h2 class="text-3xl md:text-4xl font-light mt-2 text-[#262338]">visual case studies</h2>
+        </div>
+
+        <!-- masonry-like grid (designer pinboard) -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-14">
+          <div class="aspect-[4/5] bg-white rounded-3xl p-4 shadow-sm flex flex-col">
+            <div class="bg-[#d7d0f0] w-full h-28 rounded-2xl flex items-center justify-center text-4xl">🌿</div>
+            <p class="font-mono text-xs mt-3 text-[#645686]">app UI · wellness</p>
+            <p class="text-sm font-medium mt-1">somnus</p>
+            <span class="text-xs text-gray-400 mt-2">UI/UX · mobile</span>
+          </div>
+          <div class="aspect-[4/5] bg-white rounded-3xl p-4 shadow-sm flex flex-col">
+            <div class="bg-[#fadfcf] w-full h-28 rounded-2xl flex items-center justify-center text-4xl">🕸️</div>
+            <p class="font-mono text-xs mt-3 text-[#645686]">web dev + graphic</p>
+            <p class="text-sm font-medium mt-1">re:wild</p>
+            <span class="text-xs text-gray-400 mt-2">brand · motion</span>
+          </div>
+          <div class="aspect-[4/5] bg-white rounded-3xl p-4 shadow-sm flex flex-col">
+            <div class="bg-[#c9e2f5] w-full h-28 rounded-2xl flex items-center justify-center text-4xl">📼</div>
+            <p class="font-mono text-xs mt-3 text-[#645686]">video / content</p>
+            <p class="text-sm font-medium mt-1">chroma 24</p>
+            <span class="text-xs text-gray-400 mt-2">editing · afterfx</span>
+          </div>
+          <div class="aspect-[4/5] bg-white rounded-3xl p-4 shadow-sm flex flex-col">
+            <div class="bg-[#e4d7f0] w-full h-28 rounded-2xl flex items-center justify-center text-4xl">◰</div>
+            <p class="font-mono text-xs mt-3 text-[#645686]">software eng + ui</p>
+            <p class="text-sm font-medium mt-1">vault OS</p>
+            <span class="text-xs text-gray-400 mt-2">dashboard</span>
+          </div>
+        </div>
+        <div class="flex justify-center mt-10">
+          <button class="glass-pill px-8 py-3 rounded-full text-sm text-[#564b79] border border-white/80 hover:bg-white/80 transition">view full archive →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECT – soft, elegant, almost like a letterhead -->
+    <section id="connect" class="max-w-7xl mx-auto px-6 md:px-10 py-24">
+      <div class="bg-[#ffffffc0] backdrop-blur-sm rounded-[3.5rem] p-10 md:p-14 border border-white/70 shadow-xl">
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="flex-1">
+            <span class="text-[#8f7eb0] text-sm font-medium">–––  contact / studio  –––</span>
+            <h2 class="text-4xl md:text-5xl font-light mt-4 leading-tight text-[#24203a]">let’s craft<br>something <span class="italic-slab text-[#a28adc]">beautiful</span></h2>
+            <p class="text-[#5a5276] mt-5 max-w-md text-lg font-light">web, app, video, content, sales, graphic, ui/ux — we blend all with design at heart.</p>
+            <!-- minimalist contact list -->
+            <div class="mt-8 space-y-3 text-sm">
+              <p class="flex items-center gap-4"><span class="text-[#9a8bc2] w-16">studio</span> <span class="font-medium text-[#332f4a]">123 design district, creative hub</span></p>
+              <p class="flex items-center gap-4"><span class="text-[#9a8bc2] w-16">tel</span> <span class="font-medium text-[#332f4a]">+1 (415) 867 5309</span></p>
+              <p class="flex items-center gap-4"><span class="text-[#9a8bc2] w-16">email</span> <span class="font-medium text-[#332f4a]">hello@iterra.studio</span></p>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col items-start justify-center bg-[#f3efff] p-8 rounded-3xl border border-white/60">
+            <span class="text-xs uppercase tracking-widest text-[#7a68a3]">inspiration</span>
+            <p class="text-4xl font-light my-4 text-[#342f48]">“design is<br>intelligence<br>made visible”</p>
+            <span class="text-[#8a7baf]">— alina wheeler</span>
+            <!-- little colour dots again -->
+            <div class="flex gap-2 mt-6">
+              <span class="color-dot bg-[#e1c9ff]"></span>
+              <span class="color-dot bg-[#c9e1ff]"></span>
+              <span class="color-dot bg-[#fae1c9]"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER – subtle like colophon -->
+    <footer class="border-t border-[#e0d6f0] py-8 bg-white/30">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-center text-xs text-[#7e73a0]">
+        <div>© 2025 iterra.studio — for designers, by designers.</div>
+        <div class="flex gap-6 mt-3 md:mt-0">
+          <a href="#" class="hover:text-[#5e4d89]">are.na</a>
+          <a href="#" class="hover:text-[#5e4d89]">github</a>
+          <a href="#" class="hover:text-[#5e4d89]">read.cv</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
